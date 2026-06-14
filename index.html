@@ -145,6 +145,9 @@
     }
 
     .doc-card {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
       background: var(--card);
       border: 1px solid #dddddd;
       border-radius: 10px;
@@ -156,12 +159,26 @@
       box-shadow: 0 2px 8px var(--shadow);
     }
 
-    .doc-card h2 {
+    .doc-thumb {
+      flex: 0 0 140px;
+    }
+
+    .doc-thumb img {
+      display: block;
+      width: 140px;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e6e6e6;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .doc-body h2 {
       margin: 0 0 0.35rem;
       font-size: 1.5rem;
     }
 
-    .doc-card p {
+    .doc-body p {
       margin: 0 0 0.85rem;
       font-family: "Cormorant Garamond", Georgia, serif;
       line-height: 1.7;
@@ -214,7 +231,12 @@
       }
 
       .doc-card {
+        flex-direction: column;
         padding: 14px 16px;
+      }
+
+      .doc-thumb {
+        flex-basis: auto;
       }
     }
   </style>
@@ -248,19 +270,34 @@
 
         <ul class="doc-list">
           <li class="doc-card">
-            <h2>Presentation</h2>
-            <p>Slide deck for the MCLE program.</p>
-            <a class="doc-link" href="docs/Presentation.pdf">Open Presentation (PDF)</a>
+            <a class="doc-thumb" href="docs/Presentation.pdf">
+              <img src="thumbnails/presentation-thumb.png" alt="Presentation first page preview">
+            </a>
+            <div class="doc-body">
+              <h2>Presentation</h2>
+              <p>Slide deck for the MCLE program.</p>
+              <a class="doc-link" href="docs/Presentation.pdf">Open Presentation (PDF)</a>
+            </div>
           </li>
           <li class="doc-card">
-            <h2>Local Rules Survey</h2>
-            <p>Survey of local rules across California superior courts.</p>
-            <a class="doc-link" href="docs/Local%20Rules%20Survey.pdf">Open Local Rules Survey (PDF)</a>
+            <a class="doc-thumb" href="docs/Local%20Rules%20Survey.pdf">
+              <img src="thumbnails/local-rules-survey-thumb.png" alt="Local Rules Survey first page preview">
+            </a>
+            <div class="doc-body">
+              <h2>Local Rules Survey</h2>
+              <p>Survey of local rules across California superior courts.</p>
+              <a class="doc-link" href="docs/Local%20Rules%20Survey.pdf">Open Local Rules Survey (PDF)</a>
+            </div>
           </li>
           <li class="doc-card">
-            <h2>Memo</h2>
-            <p>Supporting memorandum for the presentation.</p>
-            <a class="doc-link" href="docs/Memo.pdf">Open Memo (PDF)</a>
+            <a class="doc-thumb" href="docs/Memo.pdf">
+              <img src="thumbnails/memo-thumb.png" alt="Memo first page preview">
+            </a>
+            <div class="doc-body">
+              <h2>Memo — Case Study</h2>
+              <p>Case study for the session, including the prompts promised for the program.</p>
+              <a class="doc-link" href="docs/Memo.pdf">Open Memo (PDF)</a>
+            </div>
           </li>
         </ul>
       </div>
